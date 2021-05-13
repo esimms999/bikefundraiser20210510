@@ -28,7 +28,7 @@ animate <- ggplot(data = date_cumulativekm_dailykm, aes(x = DAY, y = CUMULATIVE_
   geom_col(aes(group=seq_along(DAY), y = DAILY_KM, color = "red"), width = 0.3, show.legend = FALSE) +
   geom_line(aes(color = "green"), size = 2, show.legend = FALSE) +
   geom_point() +
-  geom_text(aes(label=CUMULATIVE_KM, vjust= -2), show.legend = FALSE) +
+  geom_text(aes(label=CUMULATIVE_KM_CHAR, vjust= -2), show.legend = FALSE) +
   geom_vline(xintercept = 31, linetype = "dashed") +
   geom_hline(yintercept = 1000, linetype = "dashed") +
   geom_abline(slope = 1000/31, linetype = "dotted") +

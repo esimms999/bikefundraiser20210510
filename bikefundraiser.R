@@ -40,4 +40,4 @@ animate <- ggplot(data = date_cumulativekm_dailykm, aes(x = DAY, y = CUMULATIVE_
 
 # Create animated gif
 animate(animate, renderer=gifski_renderer(), nframes = 20, duration = 20, fps = 10, end_pause = 60, rewind = FALSE)
-anim_save("fileec72091c1a.gif", path = "output")
+anim_save("fileec4527ed1d.gif", path = "output")

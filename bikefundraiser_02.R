@@ -31,8 +31,9 @@ animate <- ggplot(data = date_cumulativekm_dailykm, aes(x = DAY, y = CUMULATIVE_
   geom_text(aes(label=CUMULATIVE_KM_CHAR, vjust= -2), show.legend = FALSE) +
   geom_vline(xintercept = 31, linetype = "dashed") +
   geom_hline(yintercept = 1000, linetype = "dashed") +
+  annotate("text", x = 5, y = 1000, label = "Challenge: 1000 Km", vjust = -0.5) +
   geom_abline(slope = 1000/31, linetype = "dotted") +
-  coord_cartesian(xlim = c(0,31), ylim = c(0, 1000), expand = FALSE) +
+  coord_cartesian(xlim = c(0,31), ylim = c(0, 1250), expand = FALSE) +
   transition_reveal(DAY) +
   labs(title = "Daily and Cumulative Km by Challenge Day",
        subtitle = "Day: {floor(frame_along)}",
